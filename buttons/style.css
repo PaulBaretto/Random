@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+body{
+    background: #6c6868eb;
+}
 .wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -28,6 +30,7 @@
 
 /* btn 01 */
 .btn--01{
+    position: relative;
     font-family: 'Lato', sans-serif;
     min-height: 50px;
     width: 150px;
@@ -38,51 +41,42 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    background: rgb(255, 253, 218);
 }
 .btn--01:focus{
     outline: none;
 }
-.btn-01-icon{
-    position: relative;
-    padding-inline: 3px;
-    background: darkgoldenrod;
-    /* transition: border-width 0.2s linear; */
-}
-.btn-01-icon::after{
+.btn--01::before,
+.btn--01::after{
     position: absolute;
     content: '';
     width: 100%;
-    height: 100%;
     left: 0;
-    transition-delay: 1.5s;
-    transition: border 0.5s linear;
+    transition: 0.3s linear;
+    z-index: 0;
 }
-.btn-01-icon i{
-    transition: transform 0.2s linear;
+.btn--01::before{
+    top: 0;
+    height: 0;
+    background: rgb(200, 200, 200);
 }
-.btn-01 .btn-01-icon::after{
-    /* border-left: 2px solid; */
-    /* border-bottom: 2px solid; */
-    /* transform: rotate(-40deg); */
-    height: 10px;
-    bottom: 6px;
-    animation: tick 1.5s linear ;
-    background: red;
+.btn--01::after{
+    bottom: 0;
+    height: 0;
+    background: rgb(173, 216, 230);
 }
-@keyframes tick {
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(-50deg);
-    }
-    100%{
-        transform: rotate(-400deg);
-        border-left: 2px solid;
-        border-bottom: 2px solid;
-    }
+.btn--01:hover::before,
+.btn--01:hover::after{
+    height: 50%;
 }
-.btn-01 .btn-01-icon i{
-    transform: scale(0);
-    transform-origin: bottom;
+.btn-01-text{
+    position: relative;
+    transition: color 0.2s ease-in;
+    transition-delay: 0.2s;
+    z-index: 2;
+}
+.btn-01-icon{
+    position: relative;
+    padding-inline: 3px;
+    z-index: 2;
 }
