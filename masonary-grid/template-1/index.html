@@ -1,15 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-</head>
-<body>
-    Console.log('Hellow world')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>masonry-1</title>
+    <!-- font-roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script>
-        console.log('test')
-    </script>
-</body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/style2.css" /> -->
+  </head>
+  <body>
+    <div class="masonry-container">
+      <div class="masonry-wrapper">
+        <!-- The masonry Grid contains 3 columns in desktop and 2 in tab + Mob. Hence images from column 3 will combine into column 1 retaining the sizes according to the mobile design of column 1.  -->
+
+        <!-- The grids will be Sets of 3 so its easy to understand and copy for new grids and sets (the sets will be used only to understand the arrangement) -->
+
+        <!-- SET BIG  -->
+
+        <!-- Card 1 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-big mb-big" src="https://images.unsplash.com/photo-1700224960039-4c8f392e1aee?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-big mb-big" src="https://images.unsplash.com/photo-1682687220067-dced9a881b56?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-big mb-big" src="https://images.unsplash.com/photo-1682687220247-9f786e34d472?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+
+        <!-- SET SMALL  -->
+
+        <!-- Card 1 -->
+        <div class="masonry-card">
+          <a href="#" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-small mb-big" src="https://images.unsplash.com/photo-1682695795798-1b31ea040caf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-small mb-big" src="https://images.unsplash.com/photo-1699488169253-3e6dfa960947?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-small mb-small" src="https://images.unsplash.com/photo-1700049749697-63beefb4915e?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="masonry-card">
+          <a href="#" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-small mb-small" src="https://images.unsplash.com/photo-1700319514512-1bcb679e04ab?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-small mb-small" src="https://images.unsplash.com/photo-1700248123701-085cdc5c3e83?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+
+        <!-- SET MEDIUM  -->
+
+        <!-- Card 1 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-medium mb-small" src="https://images.unsplash.com/photo-1700366232028-d64ab5f6c3a8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-medium mb-small" src="https://images.unsplash.com/photo-1700410426386-704d39c87828?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="masonry-card">
+          <a href="" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-medium mb-small" src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="masonry-card">
+          <a href="#" class="masonry-link">
+            <div class="masonry-details">
+              <h3 class="masonry-title">Title</h3>
+              <p class="masonry-subtitle">Text or copy text</p>
+            </div>
+            <div class="masonry-image">
+              <img class="dsk-medium mb-small" src="https://images.unsplash.com/photo-1700463975226-32ba9dac86b3?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  </body>
 </html>
