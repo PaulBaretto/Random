@@ -32,11 +32,9 @@
     overflow: hidden;
     transition: 0.5s;
 }
-.masonry-card:hover:nth-child(odd) {
-    transform: skew(2deg, 2deg) scale(.92);
-}
-.masonry-card:hover:nth-child(even) {
-    transform: skew(-2deg, -2deg) scale(.92);
+.masonry-card:hover{
+    transform: scale(.92);
+    filter: grayscale(50%);
 }
 .masonry-title{
     font-family: 'Inter';
