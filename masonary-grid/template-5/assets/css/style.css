@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.masonary-grid-5-wrap {
+    max-width: 1320px;
+    margin: auto;
+}
+
+.masonary-grid-5 {
+    padding-block:3rem;
+}
+
+
+.masonary-grid-5-row {
+
+    
+}
+
+.masonary-grid-5-item {
+    background-color: #f4f4f4;
+  
+
+    & img {
+        width: 100%;
+    }
+}
+
+.masonary-grid-5-item.wide {
+   
+
+}
+
+.masonary-grid-5-item.long {
+    
+}
+
+.masonary-grid-5-item.large {
+
+}
+
+
+.masonary-grid-5-item.medium {
+      
+}
+
+.masonary-grid-5-item.small {
+  
+}
