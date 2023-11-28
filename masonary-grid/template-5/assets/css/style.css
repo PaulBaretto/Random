@@ -97,6 +97,7 @@ body {
             object-fit: cover;
             filter: brightness(0.8);
             transition: .5s;
+            display:block;
         }
 
         & img:hover {
