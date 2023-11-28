@@ -29,6 +29,10 @@ body {
     --grid-secondary-color:#000;
 }
 
+.masonary-grid-5-wrap {
+    padding-inline:1rem;
+}
+
 .masonary-grid-5-row.masonary-grid {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
@@ -173,6 +177,7 @@ body {
             display: grid;
             grid-template-columns: 65% 35%;
         }
+
     }
 
     /* Medium Column */
@@ -232,3 +237,34 @@ body {
     }
 
 }
+
+/* Tablet */
+@media only screen and (max-width:1200px) {
+    .masonary-grid-5-row.masonary-grid .masonary-grid-5-item .masonary-grid-5-title {
+        font-size: 24px;
+    }
+
+    .masonary-grid-5-row.masonary-grid {
+        gap: 20px;
+    }
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width:767px) {
+    .masonary-grid-5-row.masonary-grid {
+        display: block;
+    }
+
+    .masonary-grid-5-row.masonary-grid .masonary-grid-5-item.large .masonary-grid-5-card {
+        display: block;
+    }
+
+    .masonary-grid-5-row.masonary-grid .masonary-grid-5-item.wide .masonary-grid-5-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .masonary-grid-5-row.masonary-grid .masonary-grid-5-item {
+        margin-bottom: 3rem;
+    }
+} 
