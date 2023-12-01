@@ -1,0 +1,68 @@
+
+body{
+    background-color: #cacaca;
+}
+
+/* google font inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.faq-main-wrapper{
+    --font-family:'Inter', sans-serif;
+    --tabs-bg-color:#EBEDFC;
+    --faq-bg-color:#F5F6FE;
+    --font-color:#2d2d2d;
+    margin-top: 20px;
+}
+.faq-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.faq-tabs{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.faq-holder{
+    width: 60%;
+}
+.faq-tab-buttons-holder{
+    background-color: var(--faq-bg-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+    width: 50%;
+}
+.faq-tab-buttons{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+.faq-tab-buttons li .faq-tab-btn{
+    outline: none;
+    border: none;
+    padding-block: 10px;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #fff;
+    /* background-color: transparent; */
+    transition: 0.2s linear;
+    text-align: start;
+    width: 190px;
+    padding-left: 25px;
+}
+.faq-tab-buttons li .faq-tab-btn:hover{
+    background-color: #fff;
+}
+.faq-tab-btn span{
+    margin-right: 6px;
+}

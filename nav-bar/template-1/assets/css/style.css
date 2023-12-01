@@ -47,7 +47,7 @@
             width: 100%;
             /* padding: 1.5rem; */
             box-shadow: 0px 1px 20px 0px #333;
-            border-radius: 20px;
+            border-radius: 20px 20px 20px 20px;
         }
 
         .nav-items {
@@ -107,6 +107,11 @@
                 background: transparent;
                 display: grid;
                 /* align-content: center; */
+                background-color: #ffffff;
+                top: 70px;
+                height: 0;
+                overflow: hidden;
+                transition:0.2s linear;
 
                 .nav-menu .nav-list {
 
@@ -129,9 +134,14 @@
             }
 
             .nav-wrap {
+                position: relative;
                 width: 95%;
                 margin: auto;
             }
+        }
+        .sm-show-nav-items.nav-mobile-canvas{
+            height: 300px;
+            overflow: auto;
         }
 
         .sm-nav-inner-item-holder {
@@ -140,7 +150,7 @@
             height: 0;
             transition: 0.2s linear;
             position: relative;
-            z-index: -1;
+            /* z-index: -1; */
         }
 
         .nav-opened .sm-nav-inner-item-holder {
