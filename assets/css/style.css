@@ -1,0 +1,234 @@
+
+*{
+    margin: 0;
+}
+body{
+    background-color: #6C5F5B;
+}
+.todo-main{
+    --font-family: 'Inter', sans-serif;
+    --orenge-color:#ED7D31;
+    --todo-bg-color:#4F4A45;
+    --text-color:rgba(246, 241, 238, 0.90);
+    --checked-opacity-color:0.5;
+    --input-placeholder-opacity:0.6;
+    --lg-border-radius:15px;
+    --sm-border-radius:13px;
+    padding-inline: 10px;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+}
+.todo-wrapper{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.input-and-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.input-and-btn-container .todo-input-holder{
+    width: 600px;
+    height: 70px;
+    background-color: var(--orenge-color);
+    border-radius: var(--lg-border-radius);
+}
+.todo-input-holder input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: inherit;
+    padding: 0;
+    padding-left: 20px;
+    font-family: var(--font-family);
+    font-size: 30px;
+    color: var(--text-color);
+}
+.todo-input-holder input::placeholder{
+    font-family: var(--font-family);
+    color: var(--text-color);
+    font-size: 30px;
+    opacity: var(--input-placeholder-opacity);
+}
+.add-todo-btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 70px;
+    background-color: var(--orenge-color);
+    border-radius: var(--lg-border-radius);
+}
+.add-todo-btn button:focus{
+    background-color: #e7772c;
+}
+.add-todo-inner-text{
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.todos-holder{
+    width: 100%;
+}
+.todo-inner-wrapper{
+    width: 100%;
+    height: 300px;
+    background-color: var(--todo-bg-color);
+    border-radius: var(--lg-border-radius);
+}
+.todo-inner-wrapper ul{
+    list-style: none;
+    padding: 25px 20px;
+}
+.todo-points-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox-holder{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 7px;
+    outline: 2px solid var(--orenge-color);
+}
+.checkbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+.checkbox-tick-img-holder{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.1s linear;
+    transform: scale(0);
+}
+.checkbox-tick-img-holder img{
+    width: 80%;
+    height: 80%;
+}
+.checkbox:checked ~ .checkbox-tick-img-holder{
+    opacity: 1;
+    transform: scale(1);
+    background-color:var(--orenge-color);
+}
+.todo-text-holder{
+    width: 80%;
+    max-width: 565px;
+}
+.todo-text-holder p{
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.delBTn{
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.del-indicater{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -70px;
+    top: 5px;
+    background-color: #000;
+    width: 0;
+    height: 34px;
+    color: var(--text-color);
+    border-radius: 3px;
+    transition: 0.1s linear;
+    overflow: hidden;
+    opacity: 0;
+}
+.del-indicater::before{
+    position: absolute;
+    content: '';
+    left: -7px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+.delBTn:hover .del-indicater{
+    overflow:visible;
+    opacity: 1;
+    width: 58px;
+}
+.del-img{
+    display: block;
+}
+.del-img img{
+    width: 100%;
+}
+@media only screen and (max-width:1080px){
+    .del-indicater{
+        display: none;
+    }
+}
+@media only screen and (max-width:600px){
+    .input-and-btn-container{
+        flex-direction: column-reverse;
+    }
+    .input-and-btn-container .todo-input-holder{
+        width: 100%;
+    }
+    .todo-input-holder input{
+        font-size: 25px;
+    }
+    .todo-input-holder input::placeholder{
+        font-size: 25;
+    }
+    .checkbox-holder{
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+    }
+    .todo-text-holder{
+        padding-left: 15px;
+    }
+    .todo-text-holder p{
+        font-size: 20px;
+    }
+    .del-img{
+        max-width: 28px;
+    }
+}
+/* the end  */
