@@ -1,21 +1,19 @@
 
 
-let todoInputBox = document.querySelector('[name="todo-input"]')
+let todoInputBox = document.querySelectorAll('[name="todo-input"]')
 let addTodo = document.querySelector('.add-todo')
 let ulWrapper = document.querySelectorAll('.todo-inner-wrapper ul');
-// console.log(ulWrapper)
+let todoPointsPtag;
 
 
 addTodo.addEventListener('click', printInputs)
 
 // Add input value in li tags 
 function printInputs(){
-    console.log(todoInputBox.value)
-    todoInputBox.value = '';
-    
+    todoPoints();
+
 }
 
-todoPoints();
 
 
 // Elements inside ulWrapper 
@@ -29,7 +27,7 @@ function todoPoints() {
     let checkboxTickImgHolder = document.createElement('span');
     let checkboxTickImg  = document.createElement('img');
     let todoTextHolder = document.createElement('div');
-    let todoPointsPtag = document.createElement('p');
+        todoPointsPtag = document.createElement('p');
     let btnHolder = document.createElement('div');
     let delBtn = document.createElement('button');
     let delIndicater = document.createElement('span');
@@ -46,6 +44,7 @@ function todoPoints() {
     checkboxTickImg.src='assets/images/checkbox-tick.svg';
     todoTextHolder.className='todo-text-holder';
     todoPointsPtag.className='todo-point';
+    // todoPointsPtag.textContent='Meet With CLient'
     btnHolder.className='btn-holder';
     delBtn.className='delBTn';
     delIndicater.className="del-indicater";
@@ -63,18 +62,22 @@ function todoPoints() {
     checkboxTickImgHolder.appendChild(checkboxTickImg);
     todoPointsCOntainer.appendChild(todoTextHolder);
     todoTextHolder.appendChild(todoPointsPtag);
-    todoPointsCOntainer.appendChild(delImgHolder)
-    delImgHolder.appendChild(delBtn);
+    todoPointsCOntainer.appendChild(btnHolder)
+    btnHolder.appendChild(delBtn);
     delBtn.appendChild(delIndicater);
     delBtn.appendChild(delImgHolder);
     delImgHolder.appendChild(delImg)
-    
-
     
 })
 
 }
 
 
-
-
+let allinputs = ['2', '3', '5'];
+let p = 5;
+for(i=0;i<=p; i++){
+    console.log(`${i}`)
+}
+// allinputs.forEach((t) => {
+//     console.log(t)
+// })
