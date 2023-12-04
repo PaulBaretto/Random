@@ -33,10 +33,6 @@ function todoPoints() {
     let delIndicater = document.createElement('span');
     let delImgHolder = document.createElement('span');
     let delImg = document.createElement('img');
-    
-    
-    let todoInput = document.querySelector('[name="todo-input"]').value;
-   
 
 
     todoPointsCOntainer.className = 'todo-points-container';
@@ -48,7 +44,7 @@ function todoPoints() {
     checkboxTickImg.src='assets/images/checkbox-tick.svg';
     todoTextHolder.className='todo-text-holder';
     todoPointsPtag.className='todo-point';
-    todoPointsPtag.textContent= todoInput
+    // todoPointsPtag.textContent='Meet With CLient'
     btnHolder.className='btn-holder';
     delBtn.className='delBTn';
     delIndicater.className="del-indicater";
@@ -64,7 +60,6 @@ function todoPoints() {
     checkBoxHolder.appendChild(checkbox)
     checkBoxHolder.appendChild(checkboxTickImgHolder)
     checkboxTickImgHolder.appendChild(checkboxTickImg);
-
     todoPointsCOntainer.appendChild(todoTextHolder);
     todoTextHolder.appendChild(todoPointsPtag);
     todoPointsCOntainer.appendChild(btnHolder)
